@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biobank Core Facility - Accommodation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (max-width: 768px) {
+            h2 { font-size: 1.5rem; }
+        }
+        #mobileMenu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Hamburger Menu Button -->
+    <button id="menuToggle" class="block md:hidden text-white">
+        ☰
+    </button>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <ul id="mobileMenu" class="fixed top-0 left-0 w-3/4 h-full bg-blue-900 text-white flex flex-col text-center md:hidden menu-hidden">
+        <li><a href="#home" class="py-2 block hover:bg-blue-700">Home</a></li>
+        <li><a href="#about" class="py-2 block hover:bg-blue-700">About</a></li>
+        <li><a href="#schedule" class="py-2 block hover:bg-blue-700">Schedule</a></li>
+        <li><a href="#contact" class="py-2 block hover:bg-blue-700">Contact</a></li>
+        <li><a href="#accommodation" class="py-2 block hover:bg-blue-700">Suggested Accommodation</a></li>
+    </ul>
+
+    <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+    </script>
+
+    <!-- Header (Fixed Navbar) -->   
+<header class="bg-blue-900 text-white py-3 shadow-lg fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex items-center justify-between px-4">
+        
+        <!-- Left Section (Logo & Title) -->
+        <div class="flex items-center space-x-3">
+            <img src="./images/pcc.png" alt="Logo" class="h-8 w-8">               
+            <h1 class="text-base italic font-semibold whitespace-nowrap">
+                PCC & PGC (BCF) Activities
+            </h1>
+        </div>
+
+        <!-- Middle Section (Empty for Spacing) -->
+        <div class="flex-1"></div>
+
+        <!-- Right Section (Navigation) -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="#home" class="hover:underline">Home</a>
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#schedule" class="hover:underline">Schedule</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+            <a href="#accommodation" class="hover:underline">Suggested Accommodation</a>
+        </nav>
+
+    </div>
+</header>
+       
+       <!-- Hero Section -->
+        <section id="home"
+        class="relative min-h-screen flex items-center justify-center text-white text-center"
+        style="background-image: url('./images/12.png'); 
+            background-size: contain; 
+            background-position: center 40px;
+            background-repeat: no-repeat;
+            padding-top: 150px;">
+        </section>
+
+        <!-- Breadcrumb Section Adjusted -->
+        <div class="absolute top-[95%] w-full">
+            <nav aria-label="breadcrumb" class="container mx-auto px-6 py-3 bg-gray-50 shadow-sm rounded-lg">
+            <ol class="breadcrumb flex space-x-2 text-gray-600 text-sm">
+                <li><a href="index.html" class="text-indigo-600 font-medium hover:underline">HOME</a></li>
+                <li class="text-gray-400">></li>
+                <li id="breadcrumb-current" class="text-gray-900 font-semibold">About</li>
+            </ol>
+            </nav>
+            </div>    
+
+        <!-- Heading Section -->
+        <div class="container mx-auto px-6 py-4 text-center max-w-screen-xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-snug">
+                Establishing the PCC Molecular and Genomic <br>
+                Research Laboratory, Biobank, and Tumor Bank
+            </h2>
+        </div>
+
+        <!-- Event Details Badges -->
+        <div class="flex flex-wrap justify-center gap-4 mt-4 max-w-screen-xl mx-auto">
+            <span class="px-6 py-2 text-white text-sm md:text-base font-medium bg-indigo-600 rounded-full shadow-md transition-all hover:bg-indigo-700">
+                1-2 April 2025
+            </span>
+            <span class="px-6 py-2 text-white text-sm md:text-base font-medium bg-indigo-600 rounded-full shadow-md transition-all hover:bg-indigo-700">
+                9:00 AM - 5:00 PM
+            </span>
+            <span class="px-6 py-2 text-white text-sm md:text-base font-medium bg-indigo-600 rounded-full shadow-md transition-all hover:bg-indigo-700">
+                Institute of Biology Auditorium, UP Diliman
+            </span>
+        </div>
+
+
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto p-8 bg-gray-50 rounded-lg shadow-lg">
+        <div class="container mx-auto px-6 py-8 bg-gray-50 rounded-lg shadow-sm">
+        <h3 class="text-xl md:text-2xl font-bold text-indigo-600">About</h3>
+        <p class="mt-2 text-gray-900 text-base leading-relaxed">
+            The Philippine Cancer Center (PCC), in collaboration with the Biobank Core Facility of the 
+            Philippine Genome Center (PGC), University of the Philippines, is undertaking an initiative 
+            to assess and develop the landscape for molecular and genomic research, biobanking, and 
+            tumor banking in the Philippines.
+        </p>
+        <div class="mt-4 text-gray-900 font-medium">
+            <p>Date: <span class="font-semibold">April 1-2, 2025</span></p>
+            <p>Location: <span class="font-semibold">Institute of Biology - Auditorium, UP Diliman</span></p>
+        </div>
+        <hr class="mt-6 border-gray-300">
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const breadcrumbCurrent = document.getElementById("breadcrumb-current");
+                const sections = document.querySelectorAll("section");
+
+                function updateBreadcrumb(sectionId) {
+                    const sectionNames = {
+                        "about": "About",
+                        "events": "Workshops & Events",
+                        "accommodation": "Accommodation",
+                        "schedule": "Event Schedule",
+                        "contact": "Contact"
+                    };
+
+                    breadcrumbCurrent.innerHTML = sectionNames[sectionId] || "Home";
+                }
+
+                document.querySelectorAll("nav a").forEach(link => {
+                    link.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        const sectionId = this.getAttribute("href").replace("#", "");
+                        
+                        // Scroll to the section (optional)
+                        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+
+                        // Update the breadcrumb
+                        updateBreadcrumb(sectionId);
+                    });
+                });
+
+                // Default breadcrumb (when page loads)
+                updateBreadcrumb("about");
+            });
+        </script>
+
+        <style>
+            .hidden-nav {
+                transform: translateY(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80, // Offset for fixed header
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+
+        </script>
+
+            <!-- Include AOS Library -->
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                AOS.init(); // Initialize the animations
+                </script>
+    
+            <!-- Upcoming Events -->
+            <section id="events" class="container mx-auto p-6 pb-4">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4" data-aos="fade-right">Upcoming Events</h3>
+                
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in">
+                        <img src="./images/training.jpg" alt="Event 1" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Training and Knowledge Sharing</h4>
+                        <p class="text-sm text-gray-600">An informative session where participants enhanced their understanding of biobanking practices and standards.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="./images/Sample-Preparation.jpg" alt="Event 2" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Laboratory Sample Preparation</h4>
+                        <p class="text-sm text-gray-600">Researchers carefully preparing samples in the lab to ensure high-quality results for genomic research.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./images/do.jpg" alt="Event 3" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Workshop Highlights</h4>
+                        <p class="text-sm text-gray-600">A memorable moment during the Biobank Workshop, fostering collaboration and shared learning experiences.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./images/da.jpg" alt="Event 3" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Facility Inspection in Progress</h4>
+                        <p class="text-sm text-gray-600">A collaborative team inspecting the upcoming facility, ensuring it meets the highest standards for research and biobanking.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./images/de.jpg" alt="Event 3" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Successful Planning Session</h4>
+                        <p class="text-sm text-gray-600">Our team and key stakeholders gathered to discuss operational frameworks and sustainability plans for the facility.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./images/di.jpg" alt="Event 3" class="w-full h-40 object-cover rounded-lg">
+                        <h4 class="text-lg font-bold mt-2">Site Walkthrough with Experts</h4>
+                        <p class="text-sm text-gray-600">A detailed walkthrough of the facility with experts to align infrastructure with research needs.</p>
+                    </div>
+                </div>
+                <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg border border-gray-200 p-8 relative group mt-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 text-center mb-4 transition-all duration-300 group-hover:text-blue-700">
+                        Biobank Core Facility Dinner Gathering
+                    </h2>
+                
+                    <p class="text-lg text-gray-700 leading-relaxed text-justify transition-all duration-300 group-hover:text-gray-900">
+                        The <span class="font-medium text-gray-800 group-hover:text-black">Biobank Core Facility</span> invites all stakeholders to a 
+                        formal dinner at <span class="font-semibold group-hover:text-blue-700">UP Hotel on April 1, 2025, from 6:00 to 8:00 PM.</span> 
+                        This gathering marks the beginning of our two-day workshop, providing an opportunity to 
+                        <span class="text-blue-700 font-medium group-hover:text-blue-900">connect, collaborate, and strengthen our shared commitment.</span> 
+                        Join us for an evening of insightful discussions and professional networking.
+                    </p>
+                
+                    <hr class="my-4 border-gray-300 transition-all duration-300 group-hover:border-blue-700">
+                
+                    <p class="text-lg text-gray-800 text-justify transition-all duration-300 group-hover:text-gray-900">
+                        <span class="font-semibold group-hover:text-blue-700">Accommodation Information:</span>  
+                        To ensure a comfortable and seamless stay, we have curated a list of recommended hotels near the venue. 
+                        These accommodations have been selected for their convenience, accessibility, and quality service.
+                    </p>
+                </div>
+
+            </section>
+            <section id="schedule" class="container mx-auto p-6">
+
+                <div class="container mx-auto px-6 mt-2">
+                    <!-- Additional content can be placed here -->
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg border border-gray-200 p-8 relative group mt-4">
+                <section id="schedule" class="container mx-auto p-8 bg-gray-50 rounded-lg shadow-lg">
+                <div class="bg-gray-100 p-8" x-data="{ showAfternoon: false }">
+                    <h4 class="text-2xl font-bold text-blue-700">Schedule</h4>
+                
+                    <h3 class="font-bold text-lg mt-4">DAY 1: RESOURCES AND GOVERNANCE</h3>
+                    <p class="text-gray-600">A full day of discussions and validations on facility design, workforce needs, and governance.</p>
+                
+                    <table class="w-full mt-4 border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 text-left">TIME</th>
+                                <th class="p-3 text-left">ACTIVITIES</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-900">
+                            <tr class="border-b">
+                                <td class="p-3">8:00 - 9:00 AM</td>
+                                <td class="p-3">Registration of participants</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50">
+                                <td class="p-3">9:00 - 9:15 AM</td>
+                                <td class="p-3">
+                                    <strong>Welcome Remarks</strong><br>
+                                    <em>Dr. Alfonso G. Nuñez III</em><br>
+                                    <span class="italic text-gray-700">Interim Executive Director, Philippine Cancer Center</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">9:15 - 9:45 AM</td>
+                                <td class="p-3">
+                                    <strong>Overview of the Technical Report</strong><br>
+                                    <span class="italic text-gray-700">(Summary of the technical report, highlighting key findings and proposed plans for the PCC facilities)</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b bg-gray-50">
+                                <td class="p-3">9:45 - 10:00 AM</td>
+                                <td class="p-3">AM Snacks</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">10:00 - 11:00 AM</td>
+                                <td class="p-3">Discussion and Validation of PCC Facility Design & Infrastructure</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50">
+                                <td class="p-3">11:00 - Noon</td>
+                                <td class="p-3">Discussion and Validation of PCC Equipment Prioritization and Information Systems</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">Noon - 1:30 PM</td>
+                                <td class="p-3">Lunch Break</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <!-- Toggle Button for Afternoon Schedule -->
+                    <div class="text-center mt-4">
+                        <a href="javascript:void(0);" 
+                            @click="showAfternoon = !showAfternoon" 
+                            class="text-blue-600 hover:underline text-sm">
+                            <span x-text="showAfternoon ? 'Hide Afternoon Program' : 'Show Afternoon Program'"></span>
+                        </a>
+                    </div>
+                    
+                    <!-- Afternoon Schedule (Hidden Initially) -->
+                    <div x-show="showAfternoon" class="overflow-x-auto mt-4">
+                        <table class="w-full border border-gray-300">
+                            <tbody class="bg-white text-gray-900">
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3">1:30 - 2:30 PM</td>
+                                    <td class="p-3">Discussion and Validation of PCC Human Resource and Workshop Needs</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3">2:30 - 3:30 PM</td>
+                                    <td class="p-3">Discussion and Validation of PCC Governance</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3">3:30 - 3:45 PM</td>
+                                    <td class="p-3">PM Snacks</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3">3:45 - 4:30 PM</td>
+                                    <td class="p-3">Synthesis of Discussion</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Remove Unwanted Blue Dot -->
+                <style>
+                    /* Hide any unintended blue indicator */
+                    .blue-dot, .loading-indicator {
+                        display: none !important;
+                    }
+                </style>
+                
+                <!-- Alpine.js for interactive toggle -->
+                <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js"></script>
+        
+                <div class="bg-gray-100 p-8 day-2-container" x-data="{ showDay2: false }">
+                    <!-- Day 2 Toggle Button -->
+                    <div class="bg-gray-200 p-4 rounded-lg flex justify-between items-center cursor-pointer" 
+                        @click="showDay2 = !showDay2">
+                        <h3 class="text-lg font-bold underline">DAY 2: OPERATIONAL FRAMEWORK AND SUSTAINABILITY</h3>
+                        
+                    </div>
+                
+                    <div x-show="showDay2" class="mt-4 p-6 bg-white shadow-lg rounded-lg" x-cloak>
+                        <p class="text-gray-600 mt-2">A comprehensive session on operational SOPs, financial planning, and partnerships.</p>
+        
+                        <div class="overflow-x-auto mt-4">
+                            <table class="w-full border border-gray-300">
+                                <thead>
+                                    <tr class="bg-black text-white">
+                                        <th class="p-3 border">Time</th>
+                                        <th class="p-3 border">Activities</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white text-gray-900">
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">9:00 - 9:15 AM</td>
+                                        <td class="p-3 border text-center">Recap</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">9:15 - 9:45 AM</td>
+                                        <td class="p-3 border text-center">
+                                            <p>Presentation of existing guidelines related to molecular/genomic research, biobanking, and tumor banking</p>
+                                            <span class="italic text-gray-700">The Philippine Genome Center</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">9:45 - 10:00 AM</td>
+                                        <td class="p-3 border text-center">AM Snacks</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">10:00 AM - Noon</td>
+                                        <td class="p-3 border">Discussion and Validation of PCC General SOPs and other operational requirements</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">Noon - 1:30 PM</td>
+                                        <td class="p-3 border text-center">Lunch</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">1:30 - 2:30 PM</td>
+                                        <td class="p-3 border">Discussion and Validation of PCC Financial Plan and Sustainability</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">2:30 - 3:30 PM</td>
+                                        <td class="p-3 border">Discussion and Validation of PCC’s Potential Partnership Opportunities and PPP model</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">3:30 - 3:45 PM</td>
+                                        <td class="p-3 border text-center">PM Snacks</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">3:45 - 4:15 PM</td>
+                                        <td class="p-3 border">Synthesis of discussions and overall recommendations for PCC’s development plan</td>
+                                    </tr>
+                                    <tr class="border even:bg-gray-100">
+                                        <td class="p-3 border">4:15 - 4:30 PM</td>
+                                        <td class="p-3 border text-center">
+                                            <div class="font-bold">Closing Remarks</div>
+                                            <div class="italic">Dr. Carol Narra, Division Chief, Cancer Control Research Division, <br> 
+                                                <span class="italic">Philippine Cancer Center</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="container mx-auto p-8 bg-gray-50 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mt-6 text-blue-900">Getting to the Venue</h3>
+            <div class="mt-3">
+                <p>Click below for public transport routes.</p>
+                <a href="https://moovitapp.com" target="_blank" class="text-sm text-blue-500 hover:underline">Moovit Route</a> |
+                <a href="https://upd.edu.ph/directions-to-upd/" target="_blank" class="text-sm text-blue-500 hover:underline">UP Diliman Route</a>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <h2 class="text-2xl font-bold text-blue-900">Contact Us</h2>
+                <p class="mt-2 text-gray-700">For inquiries, reach us at:</p>
+                
+                <div class="mt-4 text-gray-700">
+                    <p><strong>Telephone:</strong> +63-2-8981-8500</p>
+                    <p><strong>Email:</strong> <a href="mailto:biobankcorefacility.pgc@up.edu.ph" class="text-blue-600 hover:underline">biobankcorefacility.pgc@up.edu.ph</a></p>
+                    <p><strong>Address:</strong> A. Ma. Regidor St., PGC Building, UP Diliman Campus, Quezon City, 1101</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <script>
+            document.getElementById('mapSearch').addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    const query = encodeURIComponent(this.value);
+                    document.getElementById('googleMap').src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.919123456789!2d121.07168!3d14.65157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7b7b7b7b7b7b7b7%3A0x7b7b7b7b7b7b7b7b!2s${query}!5e0!3m2!1sen!2sph!4v1610000000000!5m2!1sen!2sph`;
+                }
+            });
+        </script>
+
+        <!-- Recommended Accommodations -->
+        <section id="accommodation" class="container mx-auto p-6 bg-gray-50 rounded-lg shadow-lg">
+            <div class="text-left">
+                <h3 class="text-3xl font-bold text-blue-600 mb-3" data-aos="fade-down">Suggested Accommodations</h3>
+            </div>
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <p class="text-gray-600 leading-snug">
+                    Discover our carefully selected accommodation options to make your stay comfortable and convenient.
+                    Please be reminded that these are only recommendations, and booking is your responsibility.
+                </p>
+                <p class="text-gray-600 leading-snug">
+                    For your convenience, we have also provided the 
+                    <strong class="text-blue-600">best possible routes</strong> from the accommodations to the event location.
+                </p>
+                <p class="text-gray-600 leading-snug">
+                    <em>Click the <strong class="text-blue-600">"Inquire & Book Now"</strong></em> button to learn more details and secure your reservation.
+                </p>
+            </div>
+        </section>
+        
+        
+         <div class="grid md:grid-cols-4 gap-6 mt-6">
+                <!-- Hotel 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="images/technohub.png" alt="Microtel Technohub" class="w-full h-32 object-contain mb-4">
+                    <h4 class="text-lg font-semibold">Microtel by Wyndham</h4>
+                    <p class="text-gray-600">A comfortable stay with modern amenities and easy access to the event location.</p>
+                    <a href="https://microtel-uptechnohub.com" target="_blank" class="text-blue-600 hover:underline">Inquire & Book Now</a>
+                    <div class="mt-3">
+                        <p>Click below for public transport routes.</p>
+                        <a href="https://moovitapp.com" target="_blank" class="text-sm text-blue-500 hover:underline">Moovit Route</a> |
+                        <a href="https://upd.edu.ph/directions-to-upd/" target="_blank" class="text-sm text-blue-500 hover:underline">UP Diliman Route</a>
+                    </div>
+                </div>
+        
+                <!-- Hotel 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="images/fersal_hotel.jpg" alt="Fersal Hotel" class="w-full h-32 object-contain mb-4">
+                    <h4 class="text-lg font-semibold">Fersal Hotel</h4>
+                    <p class="text-gray-600">Enjoy a relaxing stay with modern comforts and seamless access to the event venue.</p>
+                    <a href="https://fersalhotel.com" target="_blank" class="text-blue-600 hover:underline">Inquire & Book Now</a>
+                    <div class="mt-3">
+                        <p>Click below for public transport routes.</p>
+                        <a href="https://moovitapp.com" target="_blank" class="text-sm text-blue-500 hover:underline">Moovit Route</a> |
+                        <a href="https://upd.edu.ph/directions-to-upd/" target="_blank" class="text-sm text-blue-500 hover:underline">UP Diliman Route</a>
+                    </div>
+                </div>
+        
+                <!-- Hotel 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="images/nismed.jpg" alt="UP NISMED Hostel" class="w-full h-32 object-contain mb-4">
+                    <h4 class="text-lg font-semibold">UP NISMED Hostel</h4>
+                    <p class="text-gray-600">A top choice recommended by our coordinators for a hassle-free experience.</p>
+                    <a href="https://nismed.upd.edu.ph/hostel-rooms/" target="_blank" class="text-blue-600 hover:underline">Inquire & Book Now</a>
+                    <div class="mt-3">
+                        <p>Click below for public transport routes.</p>
+                        <a href="https://moovitapp.com" target="_blank" class="text-sm text-blue-500 hover:underline">Moovit Route</a> |
+                        <a href="https://upd.edu.ph/directions-to-upd/" target="_blank" class="text-sm text-blue-500 hover:underline">UP Diliman Route</a>
+                    </div>
+                </div>
+        
+                <!-- Hotel 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="images/up_hotel.png" alt="University Hotel" class="w-full h-32 object-contain mb-4">
+                    <h4 class="text-lg font-semibold">University Hotel</h4>
+                    <p class="text-gray-600">Ideal for visitors seeking affordable accommodation near the event.</p>
+                    <a href="https://universityhotel.com.ph/" target="_blank" class="text-blue-600 hover:underline">Inquire & Book Now</a>
+                    <div class="mt-3">
+                        <p>Click below for public transport routes.</p>
+                        <a href="https://moovitapp.com" target="_blank" class="text-sm text-blue-500 hover:underline">Moovit Route</a> |
+                        <a href="https://upd.edu.ph/directions-to-upd/" target="_blank" class="text-sm text-blue-500 hover:underline">UP Diliman Route</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-3 text-center mt-3">
+            <div class="flex flex-col items-center space-y-2">
+                <!-- Logos in a row -->
+                <div class="flex items-center space-x-4">
+                    <img src="./images/UP + PGC_white.png" alt="UP + PGC Logo" class="h-8 w-auto drop-shadow-lg">                                     
+                    <img src="./images/I_BCF_05.png" alt="IBCF Logo" class="h-8 w-auto drop-shadow-lg">
+                    <img src="./images/pcc.png" alt="Logo" class="h-8 w-auto drop-shadow-lg">
+                </div>
+                <!-- Copyright Text -->
+                <p class="text-xs italic font-semibold">
+                    © 2025 UP PHILIPPINE GENOME CENTER • BIOBANKING CORE FACILITY. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </footer>
+       
+</body>
+</html>
